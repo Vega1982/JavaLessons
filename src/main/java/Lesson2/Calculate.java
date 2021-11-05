@@ -44,7 +44,7 @@ public class Calculate {
         return result;
     }
     public static double cosinusTeorema(double b, double c, double ugol) {
-        /* Теорема синусов. a^2 = b^2 + c^2 - 2bc*cos угла альфа.
+        /* Теорема косинусов. a^2 = b^2 + c^2 - 2bc*cos угла альфа.
         Для нахождения длины стороны "a", из результата расчёта
         по формуле необходимо извлечь квадратный корень */
         double cosinusUgla = cos(ugol);
