@@ -27,16 +27,18 @@ public class QuadraticEquation {
             System.out.println("Нет действительных решений уравнения");
         }
         // Если корни равны, то выводим только один корень (x1)
-         else if (root1 == root2) {
+        else if (root1 == root2) {
             System.out.println("Корни x1 и x2 равны = " + root1);
             // Если корна различны, то выводим оба корня
         } else {
             System.out.println("Корни x1 и x2 равны = " + root1 + " " + root2);
-        } }
+        }
+    }
 
 
     /**
      * Подсчитываем дискриминант по формуле a^2 - 4*b*c
+     *
      * @param a коэффициент a
      * @param b коэффициент b
      * @param c коэффициент c
