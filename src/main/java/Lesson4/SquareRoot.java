@@ -2,8 +2,6 @@ package main.java.Lesson4;
 
 import java.util.Scanner;
 
-import static java.lang.Math.pow;
-
 public class SquareRoot {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
