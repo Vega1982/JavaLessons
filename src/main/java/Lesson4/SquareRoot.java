@@ -20,9 +20,9 @@ public class SquareRoot {
             return;
         }
 
-        int resultRoot = 1;
+
         // цикл подсчёта квадратного корня
-        for (; (resultRoot < inRoot); ++resultRoot) {
+        for (int resultRoot = 1; resultRoot < inRoot; ++resultRoot) {
 
 
             if ((resultRoot * resultRoot) == inRoot) {
