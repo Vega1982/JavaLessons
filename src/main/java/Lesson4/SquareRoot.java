@@ -11,20 +11,29 @@ public class SquareRoot {
 
         // задаём начальную переменную
         // получаем от пользователя число, для которого будем вычислять кв. корень
-        double inRoot = console.nextInt();
-        int resultRoot = 1;
-
-        // цикл подсчёта квадратного корня
-        while (pow(resultRoot, 2) < inRoot) {
-            resultRoot++;
-            if (pow(resultRoot, 2) == inRoot) {
-                System.out.println("Корень числа " + inRoot + "=" + resultRoot);
-                break;
-            }
+        int inRoot = console.nextInt();
+        if (inRoot == 0) {
+            System.out.println("Нет корней для нуля.");
+            return;
         }
 
-    }
+        if (inRoot < 0) {
+            System.out.println("Нет корней для отрицательного числа.");
+            return;
+        }
 
+        int resultRoot = 1;
+        // цикл подсчёта квадратного корня
+        for (; (resultRoot < inRoot); ++resultRoot) {
+
+
+            if ((resultRoot * resultRoot) == inRoot) {
+                System.out.println("Корень числа " + inRoot + " = " + resultRoot);
+
+            }
+
+        }
+    }
 
 }
 
