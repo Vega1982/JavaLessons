@@ -20,19 +20,20 @@ public class FibonacciNumber {
         if (n == 1) {
             fN = 0;
             System.out.println("Число Фибоначчи для n" + n + " равно " + fN);
-            System.exit(0);
+            return;
+
         }
 
         if (n == 2) {
             fN = 1;
             System.out.println("Число Фибоначчи для n" + n + " равно " + fN);
-            System.exit(0);
+            return;
         }
 
         if (n == 3) {
             fN = 1;
             System.out.println("Число Фибоначчи для n" + n + " равно " + fN);
-            System.exit(0);
+            return;
         }
 
         //Основной цикл расчётов
@@ -44,7 +45,7 @@ public class FibonacciNumber {
             //Проверка для выхода из цикла и программы
             if (slipperyN == n) {
                 System.out.println("Число Фибоначчи для n" + n + " равно " + fN);
-                System.exit(0);
+                return;
             }
 
         }
