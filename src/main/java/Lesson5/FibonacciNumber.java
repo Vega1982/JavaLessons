@@ -7,8 +7,8 @@ public class FibonacciNumber {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите целое положительное число индекса n");
         System.out.print("для расчёта значения его числа Фибоначчи: ");
-        int n = console.nextInt();
-        int fN = 0;
+        long n = console.nextInt();
+        long fN = 0;
 
         //n - индекс на входе
         //fN - искомое число Фибоначчи для индекса n
@@ -37,7 +37,7 @@ public class FibonacciNumber {
         }
 
         //Основной цикл расчётов
-        for (int fN2 = 0, fN1 = 1, slipperyN = 3; slipperyN <= n; slipperyN++) {
+        for (long fN2 = 0, fN1 = 1, slipperyN = 3; slipperyN <= n; slipperyN++) {
             fN = fN1 + fN2;
             fN2 = fN1;
             fN1 = fN;
