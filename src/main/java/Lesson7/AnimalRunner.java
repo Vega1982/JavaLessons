@@ -9,7 +9,7 @@ public class AnimalRunner {
         System.out.println("Собака соседа Барбос:");
         dogBarbos.dogRun();
         dogBarbos.dogJump();
-        dogBarbos.DogFly();
+        dogBarbos.dogFly();
 
         Dog dogCharly = new Dog(-1, -1, null, "Чарли");
 
@@ -32,7 +32,7 @@ public class AnimalRunner {
 
         dogCharly.dogRun();
         dogCharly.dogJump();
-        dogCharly.DogFly();
+        dogCharly.dogFly();
 
         SphinxCat catSora = new SphinxCat(100, 100, null, "Сора");
 

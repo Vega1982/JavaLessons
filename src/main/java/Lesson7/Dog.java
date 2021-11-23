@@ -1,10 +1,10 @@
 package main.java.Lesson7;
 
 public class Dog {
-    Integer dogRun;
-    Integer dogJump;
-    Integer dogFly;
-    String dogName;
+    private Integer dogRun;
+    private Integer dogJump;
+    private Integer dogFly;
+    private String dogName;
 
     public Dog(Integer dogRun, Integer dogJump, Integer dogFly, String dogName) {
         this.dogRun = dogRun;
@@ -39,7 +39,7 @@ public class Dog {
         System.out.println("Собака " + dogName + " прыгает на " + dogJump + " сантиметров.");
     }
 
-    void DogFly() {
+    void dogFly() {
         if (dogFly == null) {
             System.out.println("Собака " + dogName + " не умеет летать");
             System.out.println("--------------------");
