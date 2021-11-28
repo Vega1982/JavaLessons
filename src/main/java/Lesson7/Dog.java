@@ -12,7 +12,6 @@ public class Dog {
         this.dogFly = dogFly;
         this.dogName = dogName;
 
-
     }
 
     public void setDogRun(Integer dogRun) {
@@ -31,6 +30,11 @@ public class Dog {
         this.dogName = dogName;
     }
 
+    public Integer getDogRun() {
+        return dogRun;
+    }
+
+
     void dogRun() {
         System.out.println("Собака " + dogName + " пробежала " + dogRun + " метров.");
     }
@@ -48,6 +52,7 @@ public class Dog {
             System.out.println("--------------------");
         }
     }
+
 
 }
 

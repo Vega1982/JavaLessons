@@ -90,6 +90,10 @@ public class AnimalRunner {
         heroicDragon.DragonJump();
         heroicDragon.DragonFly();
 
+        System.out.println("*************************");
+        System.out.println("Гонка животных");
+        System.out.println("Собака Барбос пробежала " + dogBarbos.getDogRun() + " метров");
+
     }
 
 
