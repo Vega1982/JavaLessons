@@ -36,9 +36,7 @@ public class Converter implements Celsius2Fahrenheit, Fahrenheit2Celsius {
 
     @Override
     public void Cel2Fah(double degreeIn) {
-//        double constant5 = 5.0;
-//        double constant9 = 9.0;
-//        double constant32 = 32.0;
+
         System.out.println("Температура = " + ((degreeIn * (constant9 / constant5)) + constant32) + DegreesNames.FAHRENHEIT.getDegrees());
 
 
@@ -46,9 +44,7 @@ public class Converter implements Celsius2Fahrenheit, Fahrenheit2Celsius {
 
     @Override
     public void Fah2Cel(double degreeIn) {
-//        double constant5 = 5.0;
-//        double constant9 = 9.0;
-//        double constant32 = 32.0;
+
         System.out.println("Температура = " + ((degreeIn - constant32) * (constant5 / constant9) + DegreesNames.CELSIUS.getDegrees()));
 
     }
