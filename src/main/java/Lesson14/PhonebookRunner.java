@@ -10,7 +10,7 @@ public class PhonebookRunner {
         int subscribersAmount = 10000; // Кол-во абонентов
 
         // Объявляем список с будущими абонентами
-        ArrayList<Subscriber> listOfSubscribers = new ArrayList<Subscriber>();
+        ArrayList<Subscriber> listOfSubscribers = new ArrayList<>();
 
         // Наполняем список работниками через метод
         for (int i = 0; i < subscribersAmount; i++) {
@@ -18,7 +18,7 @@ public class PhonebookRunner {
         }
 
         // Создадим коллекцию Set и скопируем в неё все элементы ранее созданного списка абонентов
-        HashSet<Subscriber> setOfSubscribers = new HashSet<Subscriber>();
+        HashSet<Subscriber> setOfSubscribers = new HashSet<>();
         setOfSubscribers.addAll(listOfSubscribers);
 
         // Создадим коллекцию Map и скопируем в неё все элементы ранее созданного списка абонентов
@@ -26,6 +26,11 @@ public class PhonebookRunner {
         for (int k = 0; k < subscribersAmount; k++) {
             mapOfSubscriber.put(numbersForMap(k), subscriberForMap(k, listOfSubscribers));
         }
+
+        // после того, как список абонентов наполнен, я хочу заполнить для каждого ArrayList boundedSubscribers,
+        // поместив туда 100 ссылок на других рандомных абонентов основгого списка listOfSubscribers
+        // но как это сделать?
+
 
     }
 
@@ -44,7 +49,6 @@ public class PhonebookRunner {
 
     // создание объектов работников со случайными параметрами
     public static Subscriber subscriberRandomGenerator() {
-        Random random = new Random();
         Subscriber subscriber = new Subscriber(getRandomFIO(), randomPhoneNumber());
         return subscriber;
     }
@@ -59,8 +63,7 @@ public class PhonebookRunner {
 
     // Метод, возвращающий число (от 1 до 10000) в качестве ключа для Map
     public static int numbersForMap(int i) {
-        int i1 = (i++) - 1;
-        return i1;
+        return (i++) - 1;
     }
 
     // Метод, возвращающий объект абонента из списка (по-порядку)

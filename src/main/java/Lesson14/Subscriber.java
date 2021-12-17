@@ -5,11 +5,12 @@ import java.util.ArrayList;
 public class Subscriber {
     private final String FIO;
     private final long telNumber;
-    private final ArrayList<Long> boundedSubscribers = new ArrayList<Long>();
+    private ArrayList<Long> boundedSubscribers = new ArrayList<Long>();
 
     public Subscriber(String FIO, Long telNumber) {
         this.FIO = FIO;
         this.telNumber = telNumber;
+        this.boundedSubscribers = boundedSubscribers;
     }
 
     public String getFIO() {
@@ -22,5 +23,9 @@ public class Subscriber {
 
     public ArrayList<Long> getBoundedSubscribers() {
         return boundedSubscribers;
+    }
+
+    public void setBoundedSubscribers(ArrayList<Long> boundedSubscribers) {
+        this.boundedSubscribers = boundedSubscribers;
     }
 }
