@@ -3,11 +3,11 @@ package main.java.Lesson16;
 import java.io.*;
 import java.util.Random;
 
-public class MyFirstThread extends Thread {
+public class MySecondThread extends Thread {
     private long gotSleepTime;
 
 
-    public MyFirstThread() {
+    public MySecondThread() {
 
     }
 
@@ -15,25 +15,25 @@ public class MyFirstThread extends Thread {
         return gotSleepTime;
     }
 
-    Logger logger1 = new Logger("Это сообщение 1-го потока");
+    Logger logger2 = new Logger("Это сообщение 2-го потока");
 
 
     @Override
     public void run() {
-        Thread.currentThread().setName("1st Thread");
+        Thread.currentThread().setName("2nd Thread");
 
         // Цикл для вывода информации в файл
         for (long i = 0; i < 60000; ) {
             gotSleepTime = sleepTime(); // переменная для рандомного сна
             System.out.println("Прошло милисекунд: " + i);
             System.out.println("Статус " + Thread.currentThread().getName() + ": " + Thread.currentThread().getState());
-            System.out.println(logger1.getMESSAGE());
+            System.out.println(logger2.getMESSAGE());
             System.out.println("Время: " + getTime()); // Через метод из Логгера получу время
 
             // сам вывод в файл
             try (FileWriter writer = new FileWriter("logThread.txt", true)) {
                 writer.write("Статус " + Thread.currentThread().getName() + ": " + Thread.currentThread().getState() + " ");
-                writer.write(logger1.getMESSAGE() + " ");
+                writer.write(logger2.getMESSAGE() + " ");
                 writer.write("Время: " + getTime() + " ");
                 //writer.write(text);
                 writer.flush();
