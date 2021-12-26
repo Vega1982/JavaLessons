@@ -1,13 +1,14 @@
 package main.java.Lesson16;
 
-import java.io.*;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Random;
 
-public class MyFirstThread extends Thread {
+public class MyThirdThread extends Thread {
     private long gotSleepTime;
 
 
-    public MyFirstThread() {
+    public MyThirdThread() {
 
     }
 
@@ -15,25 +16,25 @@ public class MyFirstThread extends Thread {
         return gotSleepTime;
     }
 
-    LoggerMain loggerMain1 = new LoggerMain("Это сообщение 1-го потока");
+    LoggerMain loggerMain3 = new LoggerMain("Это сообщение 3-го потока");
 
 
     @Override
     public void run() {
-        Thread.currentThread().setName("1st Thread");
+        Thread.currentThread().setName("3rd Thread");
 
         // Цикл для вывода информации в файл
         for (long i = 0; i < 60000; ) {
             gotSleepTime = sleepTime(); // переменная для рандомного сна
             //System.out.println("Прошло милисекунд: " + i);
             System.out.println("Статус " + Thread.currentThread().getName() + ": " + Thread.currentThread().getState());
-            System.out.println(loggerMain1.getMESSAGE());
+            System.out.println(loggerMain3.getMESSAGE());
             System.out.println("Время: " + getTime());
 
             // сам вывод в файл
             try (FileWriter writer = new FileWriter("logThread.txt", true)) {
                 writer.write("Статус " + Thread.currentThread().getName() + ": " + Thread.currentThread().getState() + " ");
-                writer.write(loggerMain1.getMESSAGE() + " ");
+                writer.write(loggerMain3.getMESSAGE() + " ");
                 writer.write("Время: " + getTime() + " ");
                 //writer.write(text);
                 writer.flush();

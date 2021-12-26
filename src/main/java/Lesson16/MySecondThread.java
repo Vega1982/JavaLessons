@@ -15,7 +15,7 @@ public class MySecondThread extends Thread {
         return gotSleepTime;
     }
 
-    Logger logger2 = new Logger("Это сообщение 2-го потока");
+    LoggerMain loggerMain2 = new LoggerMain("Это сообщение 2-го потока");
 
 
     @Override
@@ -25,15 +25,15 @@ public class MySecondThread extends Thread {
         // Цикл для вывода информации в файл
         for (long i = 0; i < 60000; ) {
             gotSleepTime = sleepTime(); // переменная для рандомного сна
-            System.out.println("Прошло милисекунд: " + i);
+            //System.out.println("Прошло милисекунд: " + i);
             System.out.println("Статус " + Thread.currentThread().getName() + ": " + Thread.currentThread().getState());
-            System.out.println(logger2.getMESSAGE());
-            System.out.println("Время: " + getTime()); // Через метод из Логгера получу время
+            System.out.println(loggerMain2.getMESSAGE());
+            System.out.println("Время: " + getTime());
 
             // сам вывод в файл
             try (FileWriter writer = new FileWriter("logThread.txt", true)) {
                 writer.write("Статус " + Thread.currentThread().getName() + ": " + Thread.currentThread().getState() + " ");
-                writer.write(logger2.getMESSAGE() + " ");
+                writer.write(loggerMain2.getMESSAGE() + " ");
                 writer.write("Время: " + getTime() + " ");
                 //writer.write(text);
                 writer.flush();
@@ -60,7 +60,7 @@ public class MySecondThread extends Thread {
         return sleepTime;
     }
 
-    // метод лоя получения времени. При вызове такого же метода из класса Logger время почему-то не меняется
+    // метод для получения времени. При вызове такого же метода из класса Logger время почему-то не меняется
     public static String getTime() {
         return String.valueOf(java.time.LocalDateTime.now());
     }
