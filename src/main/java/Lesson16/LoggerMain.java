@@ -35,11 +35,12 @@ public class LoggerMain {
 
     public static void main(String[] args) throws InterruptedException {
 
-//        logger.error("ERROR");
-//        logger.warn("WARNING");
-//        logger.fatal("FATAL");
-//        logger.debug("DEBUG");
-//        logger.info("INFO");
+        // Не могу добавить логирование
+        //        logger.error("ERROR");
+        //        logger.warn("WARNING");
+        //        logger.fatal("FATAL");
+        //        logger.debug("DEBUG");
+        //        logger.info("INFO");
 
 
         MyFirstThread thread1 = new MyFirstThread();
