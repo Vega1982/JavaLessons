@@ -1,4 +1,4 @@
-package main.java.Lesson9;
+package Lesson9;
 
 public abstract class Automobile {
     public Automobile() {

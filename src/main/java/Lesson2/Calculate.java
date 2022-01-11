@@ -1,4 +1,4 @@
-package main.java.Lesson2;
+package Lesson2;
 
 import static java.lang.Math.cos;
 import static java.lang.Math.sqrt;

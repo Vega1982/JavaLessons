@@ -1,4 +1,4 @@
-package main.java.Lesson16;
+package Lesson16;
 
 import java.io.*;
 import java.util.Random;

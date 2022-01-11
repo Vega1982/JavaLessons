@@ -1,4 +1,4 @@
-package main.java.Lesson10;
+package Lesson10;
 
 public interface Celsius2Fahrenheit {
     default void Cel2Fah(double degreeIn) {

@@ -1,4 +1,4 @@
-package main.java.Lesson15;
+package Lesson15;
 
 import java.util.Arrays;
 import java.util.Comparator;

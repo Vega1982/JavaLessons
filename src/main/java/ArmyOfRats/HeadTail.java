@@ -1,4 +1,4 @@
-package main.java.ArmyOfRats;
+package ArmyOfRats;
 
 public class HeadTail {
     public static boolean headTailDeal(double tail, double tailCap) {

@@ -1,4 +1,4 @@
-package main.java.Lesson13;
+package Lesson13;
 
 import java.util.ArrayList;
 import java.util.ListIterator;

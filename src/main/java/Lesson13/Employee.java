@@ -1,4 +1,4 @@
-package main.java.Lesson13;
+package Lesson13;
 
 public class Employee {
     private final String FIO;

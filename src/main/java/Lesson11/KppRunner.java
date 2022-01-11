@@ -1,4 +1,4 @@
-package main.java.Lesson11;
+package Lesson11;
 
 import java.util.concurrent.ThreadLocalRandom;
 

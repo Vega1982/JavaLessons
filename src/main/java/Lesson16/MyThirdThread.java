@@ -1,4 +1,4 @@
-package main.java.Lesson16;
+package Lesson16;
 
 import java.io.FileWriter;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package main.java.Lesson9;
+package Lesson9;
 
 public class Truck extends Automobile {
     private double distance = 0.0;

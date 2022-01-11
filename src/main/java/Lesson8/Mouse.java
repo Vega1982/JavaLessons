@@ -1,4 +1,4 @@
-package main.java.Lesson8;
+package Lesson8;
 
 public class Mouse extends Mammals {
 

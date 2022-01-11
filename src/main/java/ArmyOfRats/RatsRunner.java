@@ -1,4 +1,4 @@
-package main.java.ArmyOfRats;
+package ArmyOfRats;
 
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;

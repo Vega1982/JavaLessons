@@ -1,4 +1,4 @@
-package main.java.Lesson9;
+package Lesson9;
 
 public class AutoRunner {
     public static void main(String[] args) {
