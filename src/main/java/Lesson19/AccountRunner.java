@@ -7,8 +7,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
 
+
 public class AccountRunner {
     @SneakyThrows
+    @WithdrawDenied(withdrawMethod = "withdraw")
     public static void main(String[] args) {
         // Для простоты логика вызова будет в двух отдельных методах
         // Это вызов для физ. лица:
@@ -17,6 +19,38 @@ public class AccountRunner {
         // Это вызов для юр. лица:
         entitylDoing();
 
+        // Попытка зачисления на баланс ФЛ
+
+        IndividualAccount individualAccount = new IndividualAccount();
+        individualAccount.deposit(BigDecimal.valueOf(100));
+        // Попытка зачисления на баланс ЮЛ
+        EntityAccount entitylAccount = new EntityAccount();
+        entitylAccount.deposit(BigDecimal.valueOf(1000));
+
+        System.out.println("");
+        System.out.println("Отработка логики аннотации:");
+
+        // Попытка снятия с баланса ФЛ
+        for (Method m : individualAccount.getClass().getDeclaredMethods())
+            if (m.isAnnotationPresent(WithdrawDenied.class)) {
+            System.out.println("Снятие для ФЛ запрещено!");
+            break;
+            } else {
+                System.out.println("Снятие для ФЛ успешно!");
+                individualAccount.withdraw(BigDecimal.valueOf(1));
+            }
+
+
+
+        // Попытка снятия с баланса ЮЛ
+        for (Method m : entitylAccount.getClass().getDeclaredMethods())
+            if (m.isAnnotationPresent(WithdrawDenied.class)) {
+                System.out.println("Снятие для ЮЛ запрещено!");
+                break;
+            } else {
+                System.out.println("Снятие для ЮЛ успешно!");
+                entitylAccount.withdraw(BigDecimal.valueOf(1));
+            }
 
     }
 
@@ -69,4 +103,7 @@ public class AccountRunner {
         anotherMethodPrint.setAccessible(true);
         anotherMethodPrint.invoke(entityAccount);
     }
+
+
 }
+

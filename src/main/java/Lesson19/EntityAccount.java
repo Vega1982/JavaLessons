@@ -15,7 +15,7 @@ public class EntityAccount {
         this.balance = this.balance.add(money);
 
     }
-
+    @WithdrawDenied(withdrawMethod = "withdraw")
     private void print() {
 
         System.out.println("Баланс юр.лица: " + this.balance);

@@ -22,7 +22,7 @@ public class IndividualAccount {
         this.balance = this.balance.add(money);
 
     }
-
+    @WithdrawDenied(withdrawMethod = "withdraw")
     private void print() {
 
         System.out.println("Баланс физ. лица: " + this.balance);
