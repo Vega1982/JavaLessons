@@ -20,31 +20,32 @@ public class Employee2XMLRunner {
         Employee position3 = new Employee("Prodazhnik", 35000);
 
         // Создадим список, содержащий объекты
-        List employeeList = new ArrayList();
-        employeeList.add(department1);
-        employeeList.add(department2);
-        employeeList.add(department3);
-        employeeList.add(position1);
-        employeeList.add(position2);
-        employeeList.add(position3);
-        System.out.println(employeeList);
+        Employees employees = new Employees();
+        employees.employees.add(department1);
+        employees.employees.add(department2);
+        employees.employees.add(department3);
+        employees.employees.add(position1);
+        employees.employees.add(position2);
+        employees.employees.add(position3);
+
+        System.out.println(employees);
 
         // Маршалинг объектов во внешний файл employee.xml
-        marshalingEmployees (employeeList);
+        marshalingEmployees (employees);
 
         // С помощью XPath найдём всех, у кого ЗП превышает среднее значение
 
     }
 
     // Метод для сохранения объектов в XML
-    private static void marshalingEmployees(List list) throws JAXBException
+    private static void marshalingEmployees(Employees emp) throws JAXBException
     {
-        JAXBContext jaxbContext = JAXBContext.newInstance(Employee.class);
+        JAXBContext jaxbContext = JAXBContext.newInstance(Employees.class);
         Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
         //Marshal the employees list in file
-        jaxbMarshaller.marshal(list, new File("c:/temp/employees.xml"));
+        jaxbMarshaller.marshal(emp, new File("c:/temp/employees.xml"));
     }
 }

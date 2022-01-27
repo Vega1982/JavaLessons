@@ -1,21 +1,29 @@
 package Lesson20;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name = "employee")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Employee {
 
-    private int personnelNumber;
-    private String login;
-    private String FIO;
-    private String department;
-    private String town;
+    @XmlElement(name = "personnelNumber")
+    public int personnelNumber;
 
-    private String position;
-    private int salary;
+    @XmlAttribute(name = "login")
+    public String login;
+
+    @XmlAttribute(name = "FIO")
+    public String FIO;
+
+    @XmlAttribute(name = "department")
+    public String department;
+
+    @XmlAttribute(name = "town")
+    public String town;
+
+    @XmlAttribute(name = "position")
+    public String position;
+
+    @XmlAttribute(name = "salary")
+    public int salary;
 
     public Employee(int personnelNumber, String login, String FIO, String department, String town) {
         this.personnelNumber = personnelNumber;
