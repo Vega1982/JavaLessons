@@ -1,7 +1,14 @@
 package Lesson20;
 
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+
 import javax.xml.bind.annotation.*;
 
+@NoArgsConstructor
+//@RequiredArgsConstructor
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Employee {
 
     @XmlElement(name = "personnelNumber")
@@ -37,6 +44,5 @@ public class Employee {
         this.position = position;
         this.salary = salary;
     }
-
 
 }

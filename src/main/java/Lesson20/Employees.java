@@ -13,4 +13,11 @@ public class Employees {
     @XmlElementWrapper(name="employees", nillable = true)
     @XmlElement(name = "employee")
     public List employees = new ArrayList<>();
+
+//    public Employees(List employees) {
+//        this.employees = employees;
+//    }
+
+    public Employees() {
+    }
 }
