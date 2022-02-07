@@ -14,11 +14,9 @@ import java.nio.file.StandardOpenOption;
 import java.util.Scanner;
 
 public class WeatherGetter {
-    private String town = "London";
-    public String APIKey = "da131e509b5f48fe7a220311aecf9506";
+    //    public String APIKey = "da131e509b5f48fe7a220311aecf9506";
 
-    public WeatherGetter(String town) {
-        this.town = town;
+    public WeatherGetter() {
     }
 
     @SneakyThrows

@@ -10,7 +10,7 @@ public class WeatherRunner {
         String town = console.nextLine();
 
         // Передадим название города в объект и запустим его метод для запроса на сервер и формирования файла с XML
-        WeatherGetter weatherGetter = new WeatherGetter(town);
+        WeatherGetter weatherGetter = new WeatherGetter();
         weatherGetter.weatherwriter(town);
 
         // Попытаемся извлечь температуру (неудачно)
